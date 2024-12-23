@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="product.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+        <title>FORESTAHN </title>
+        <script src="https://kit.fontawesome.com/fc064ffda6.js" 
+        crossorigin="anonymous">
+         </script><script src="main.js" defer></script>
+    
+</head>
+<body><nav class="navbar"> 
+    <div class="navbar__logo">
+        <i class="fa-brands fa-pagelines"></i>
+        <a href="home.html">FORESTAHN</a>
+    </div>
+
+    <ul class="navbar__menu">
+        <li onclick="moveToPage1()"><span>FERFUME</span></li>
+        <li onclick="moveToPage2()">HAND</li>
+        <li onclick="moveToPage3()">HOME FARGRANCE</li>
+        <li onclick="moveToPage4()">OUR STORY</li>
+        <li onclick="moveToPage5()">FAQ</li>
+    </ul>
+    <ul class="navbar__icons">
+                <li onclick="moveToPage6()">로그인</i></li>
+                <li onclick="moveToPage7()"><i class="fa-solid fa-user"></i></li>
+                <li onclick="moveToPage5()"><i class="fa-solid fa-bag-shopping"></i></li>
+            </ul>
+    <a href="#" class="navbar__toogleBtn">
+        <i class="fa-solid fa-bars"></i>
+    </a>
+</nav>
+	<header class="header_bar"> </header>
+
+	<main>
+		<section class="product-details">
+			<div class="product-info">
+				<h1>Forest Home Care Package</h1>
+
+				<br> <br><br> <img src="bodylotion.png" alt="바디로션 이미지"
+					class="product-image"> <br> <br> <br> <img
+					src="soap.png" alt="비누 이미지" class="product-image"> <br>
+				<br> <br> <img src="candle.png" alt="캔들 이미지"
+					class="product-image"> <br> <br> <br> <img
+					src="fargrance.png" alt="패키지 이미지" class="product-image">
+				<br> <br> <br>
+				<div class="product-heart">
+					<h2>Forest Home Care Package</h2>
+					<!-- 찜하기 버튼 클릭 시 로그인 상태 확인 -->
+					<i id="wishlistButton" class="fa-solid fa-heart fa-2xl"
+						style="color: red;"></i>
+				</div>
+				<br><br>
+
+				<ul>
+					<li>바디로션: 200ml</li>
+					<br>
+					<li>천연 비누: 100g</li>
+					<br>
+					<li>캔들: 250g</li>
+				</ul>
+				<br> <br>
+				<p>
+					가격: 100,000 원 
+				</p>
+
+
+				<br> <br>
+				<hr>
+				<br> <br>
+				<h4>집에서도 느끼는 자연의 품격과 편안함</h4><br><br>
+				<p>
+					<span>제품설명</span>
+				</p>
+				<p>"Forest Home Care Package"는 집에서 피부와 마음을 모두 편안하게 가꿀 수 있는 고품격 홈
+					케어 세트입니다. 바디로션, 천연 비누, 그리고 향기로운 캔들로 구성된 이 패키지는 집안에서 자연의 고요함과 편안함을
+					느낄 수 있게 해줍니다. 바디로션은 부드러운 보습을, 천연 비누는 순한 클렌징을, 향기로운 캔들은 마음을 안정시키는 숲의
+					향기를 선사합니다. "Forest Home Care Package"로 일상의 피로를 자연의 에너지로 씻어내며, 집에서도
+					숲속에 머무는 듯한 편안함을 누려보세요.</p>
+					<br> <br> <hr><br><br>
+				<p>
+				<p><span>제품특징</span>
+				</p></p>
+				<ul>
+					<li>바디로션: 피부 깊숙이 수분을 공급하고 자연 유래 성분으로 하루 종일 부드럽게 유지합니다.</li>
+					<li>비누: 순한 성분으로 피부를 자극 없이 깨끗하게 세정하며, 상쾌한 숲의 향기를 남깁니다.</li>
+					<li>캔들: 향긋한 우드 및 허브향이 공간을 가득 채워 집안의 분위기를 한층 고급스럽게 만듭니다.</li>
+				</ul>
+                <br>
+				<button class="add-to-cart"><i class="fa-solid fa-bag-shopping"></i> 장바구니에 추가</button>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer_bar">
+		<ul class="footer_text">
+			<li>충청남도 아산시 신창면 읍내리 순천향대학교</li>
+			<li>ahnyo3@naver.com</li>
+			<li>02-1234-5678</li>
+		</ul>
+	</footer>
+	<script src="script.js"></script>
+
+</body>
+</html>

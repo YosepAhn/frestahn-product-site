@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>FORESTAHN - 장바구니</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fc064ffda6.js" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
+</head>
+<script>// 장바구니 수량 업데이트 함수
+    function updateQuantity(change, button) {
+        const quantityElement = button.parentNode.querySelector(".quantity");
+        let quantity = parseInt(quantityElement.textContent) + change;
+        
+        if (quantity < 1) quantity = 1;
+        
+        quantityElement.textContent = quantity;
+        updateItemTotal(button, quantity);
+        updateTotalPrice();
+    }
+    
+    // 항목의 총 가격 업데이트
+    function updateItemTotal(button, quantity) {
+        const cartItem = button.closest(".cart-item");
+        const price = 50000; // 상품 가격 예시
+        const itemTotalElement = cartItem.querySelector(".item-total span");
+        
+        itemTotalElement.textContent = `₩${(price * quantity).toLocaleString()}`;
+    }
+    
+    // 전체 가격 업데이트
+    function updateTotalPrice() {
+        const cartItems = document.querySelectorAll(".cart-item");
+        let totalPrice = 0;
+    
+        cartItems.forEach(item => {
+            const itemTotal = parseInt(
+                item.querySelector(".item-total span").textContent.replace(/₩|,/g, "")
+            );
+            totalPrice += itemTotal;
+        });
+    
+        document.querySelector(".total-price").textContent = `₩${totalPrice.toLocaleString()}`;
+    }
+    
+    // 항목 제거 기능
+    function removeItem(button) {
+        const cartItem = button.closest(".cart-item");
+        cartItem.remove();
+        updateTotalPrice();
+    }
+    </script>
+<body>
+    <!-- 네비게이션 바 -->
+    <nav class="navbar"> 
+        <div class="navbar__logo">
+            <i class="fa-brands fa-pagelines"></i>
+            <a href="home.html">FORESTAHN</a>
+        </div>
+        <ul class="navbar__menu">
+            <li onclick="moveToPage1()">FERFUME</li>
+            <li onclick="moveToPage2()">HAND</li>
+            <li onclick="moveToPage3()">HOME FARGRANCE</li>
+            <li onclick="moveToPage4()">OUR STORY</li>
+            <li onclick="moveToPage5()">FAQ</li>
+        </ul>
+        <ul class="navbar__icons">
+            <li onclick="moveToPage6()">로그인</li>
+            <li onclick="moveToPage7()"><i class="fa-solid fa-user"></i></li>
+            <li onclick="moveToPage8()"><i class="fa-solid fa-bag-shopping"></i></li>
+        </ul>
+        <a href="#" class="navbar__toogleBtn">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+    </nav>
+    
+    <!-- 장바구니 섹션 -->
+    <main>
+        <div class="cart-container">
+            <h2>장바구니</h2>
+            <ul class="cart-list">
+                <li class="cart-item">
+                    <img src="ferfume.png" alt="Forest Embrace 상품 이미지">
+                    <div class="cart-details">
+                        <p>상품 이름: <span>Forest Embrace</span></p>
+                        <p>가격: <span>₩50,000</span></p>
+                        <p>수량: 
+                            <button class="quantity-btn" onclick="updateQuantity(-1, this)">-</button>
+                            <span class="quantity">1</span>
+                            <button class="quantity-btn" onclick="updateQuantity(1, this)">+</button>
+                        </p>
+                        <p class="item-total">총 가격: <span>₩50,000</span></p>
+                    </div>
+                    <button class="remove-btn" onclick="removeItem(this)">삭제</button>
+                </li>
+                <!-- 더 많은 장바구니 아이템 추가 가능 -->
+            </ul>
+            <div class="cart-summary">
+                <h3>총 합계</h3>
+                <p class="total-price">₩50,000</p>
+                <button class="checkout-btn">결제하기</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="footer_bar">
+        <ul class="footer_text">
+            <li>충청남도 아산시 신창면 읍내리 순천향대학교</li>
+            <li>ahnyo3@naver.com</li>
+            <li>02-1234-5678</li>
+        </ul>
+    </footer>
+</body>
+</html>

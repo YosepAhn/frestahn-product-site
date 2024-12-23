@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>FORESTAHN - 마이페이지</title>
+    <link rel="stylesheet" href="mypage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fc064ffda6.js" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <nav class="navbar"> 
+        <div class="navbar__logo">
+            <i class="fa-brands fa-pagelines"></i>
+            <a href="home.html">FORESTAHN</a>
+        </div>
+        <ul class="navbar__menu">
+            <li onclick="moveToPage1()">FERFUME</li>
+            <li onclick="moveToPage2()">HAND</li>
+            <li onclick="moveToPage3()">HOME FARGRANCE</li>
+            <li onclick="moveToPage4()">OUR STORY</li>
+            <li onclick="moveToPage5()">FAQ</li>
+        </ul>
+        <ul class="navbar__icons">
+            <li onclick="moveToPage6()">로그인</li>
+            <li onclick="moveToPage7()"><i class="fa-solid fa-user"></i></li>
+            <li onclick="moveToPage8()"><i class="fa-solid fa-bag-shopping"></i></li>
+        </ul>
+        <a href="#" class="navbar__toogleBtn">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+    </nav>
+    
+    <main>
+        <div class="container">
+            
+            <!-- 회원 정보 섹션 -->
+            <div class="section user-info">
+                <h3>회원정보</h3>
+                <div class="user-details">
+                    <p>이름: <span id="username">안요셉</span></p>
+                    <p>이메일: <span id="useremail">user@example.com</span></p>
+                    <p>전화번호: <span id="userphone">010-1234-5678</span></p>
+                    <p>주소: <span id="useraddress">서울시 강남구</span></p>
+                    <button id="editButton">회원정보 수정</button>
+                </div>
+            </div>
+            
+            <!-- 주문 정보 섹션 -->
+            <div class="section order-info">
+                <h3>주문정보</h3>
+                <ul class="order-list">
+                    <li class="order-item">
+                        <img src="ferfume.png" alt="상품 이미지">
+                        <div class="order-details">
+                            <p>상품 이름: <span>Forest Embrace</span></p>
+                            <p>가격: <span>₩50,000</span></p>
+                            <p>주문 날짜: <span>2023-10-15</span></p>
+                            <p>수량: <span>2</span></p>
+                            <p>총 가격: <span>₩100,000</span></p>
+                        </div>
+                        <button class="remove-btn">삭제</button>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- 찜 목록 섹션 -->
+            <div class="section wishlist">
+                <h3>찜 목록</h3>
+                <ul class="wishlist-list">
+                    <li class="wishlist-item">
+                        <img src="ferfume.png" alt="찜 아이템 이미지">
+                        <div class="wishlist-details">
+                            <p>상품 이름: <span>Forest Embrace</span></p>
+                            <p>설명: <span>숲속의 포근함을 담은 향기</span></p>
+                        </div>
+                        <i class="fa-solid fa-heart wishlist-heart"></i>
+                        <button class="remove-btn">삭제</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- 회원정보 수정 팝업 -->
+        <div id="editModal" class="modal">
+            <div class="modal-content">
+                <h3>회원정보 수정</h3>
+                <form id="editForm">
+                    <label for="editUsername">이름:</label>
+                    <input type="text" id="editUsername" value="안요셉">
+                    <label for="editEmail">이메일:</label>
+                    <input type="email" id="editEmail" value="user@example.com">
+                    <label for="editPhone">전화번호:</label>
+                    <input type="text" id="editPhone" value="010-1234-5678">
+                    <label for="editAddress">주소:</label>
+                    <input type="text" id="editAddress" value="서울시 강남구">
+                    <button type="submit">저장</button>
+                    <button type="button" id="closeModal">취소</button>
+                </form>
+            </div>
+        </div>
+        
+    </main>
+
+    <footer class="footer_bar">
+        <ul class="footer_text">
+            <li>충청남도 아산시 신창면 읍내리 순천향대학교</li>
+            <li>ahnyo3@naver.com</li>
+            <li>02-1234-5678</li>
+        </ul>
+        </footer>
+</body>
+</html>

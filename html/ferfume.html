@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="product.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+        <title>FORESTAHN </title>
+        <script src="https://kit.fontawesome.com/fc064ffda6.js" 
+        crossorigin="anonymous">
+         </script><script src="main.js" defer></script>
+    
+</head>
+<body><nav class="navbar"> 
+    <div class="navbar__logo">
+        <i class="fa-brands fa-pagelines"></i>
+        <a href="home.html">FORESTAHN</a>
+    </div>
+
+    <ul class="navbar__menu">
+        <li onclick="moveToPage1()"><span>FERFUME</span></li>
+        <li onclick="moveToPage2()">HAND</li>
+        <li onclick="moveToPage3()">HOME FARGRANCE</li>
+        <li onclick="moveToPage4()">OUR STORY</li>
+        <li onclick="moveToPage5()">FAQ</li>
+    </ul>
+    <ul class="navbar__icons">
+                <li onclick="moveToPage6()">로그인</i></li>
+                <li onclick="moveToPage7()"><i class="fa-solid fa-user"></i></li>
+                <li onclick="moveToPage8()"><i class="fa-solid fa-bag-shopping"></i></li>
+            </ul>
+    <a href="#" class="navbar__toogleBtn">
+        <i class="fa-solid fa-bars"></i>
+    </a>
+</nav>
+<header class="header_bar">
+    
+    <header class="header_bar"> </header>
+	<main>
+		<section class="product-details">
+			<div class="product-info">
+				<h2>Forest Embrace</h2>
+				<br> <br> <img src="ferfume.png" alt="향수 이미지"
+					class="product-image"> <br>
+				<br>
+				<div class="product-heart">
+					<h2>Forest Embrace</h2>
+					<!-- 찜하기 버튼 클릭 시 로그인 상태 확인 -->
+					<i id="wishlistButton" class="fa-solid fa-heart fa-2xl"
+						style="color: red;" onclick="addToWishlist(1)"></i>
+				</div><br><br>
+				<p>용량: 100ml</p>
+				<br> <br>
+				<p>
+					가격: 50,000 원 
+
+				</p>
+<br> <br>
+				<hr>
+				<br> <br>
+				<h4>자연의 품에서 오는 신선함과 따스함을 한 병에 담아낸 프리미엄 향수</h4>
+				<br> <br>
+				<p>
+					<span>제품설명</span>
+				</p>
+				<p>"Forest Embrace"는 숲의 신선함과 포근한 안락함을 고스란히 담아낸 프리미엄 향수입니다. 자연
+					그대로의 상쾌함과 평온함을 향기롭게 표현하여, 마치 고요한 숲속 한가운데 서 있는 듯한 기분을 선사합니다. 이 향은
+					도시의 바쁜 일상 속에서도 자연의 안락한 품에 안긴 듯한 순간을 제공하며, 감각을 깨우는 생동감과 따뜻한 안정감을 동시에
+					느끼게 합니다. 자연의 아름다움을 완벽히 담아낸 "Forest Embrace"는 일상 속에서 숲의 신비로움과 편안함을
+					체험할 수 있는 특별한 향기입니다.</p>
+				<br> <br> <hr><br><br>
+				<p>
+					<span>주요향조</span>
+				</p>
+				<ul>
+					<li><span>탑 노트:</span> 신선한 시트러스와 레몬, 소나무 잎의 상쾌한 향기로 시작합니다. 첫
+						스프레이부터 숲의 맑은 공기를 느낄 수 있습니다.</li>
+					<li><span>미들 노트:</span> 자작나무와 시더우드의 따뜻한 나무 향이 중심을 잡아줍니다. 나무의
+						깊고 풍부한 향기가 안정감을 주며, 자연의 포근함을 더해줍니다.</li>
+					<li><span>베이스 노트:</span> 앰버와 머스크의 은은하고 부드러운 향이 오래 지속되며, 잔잔한
+						여운을 남깁니다. 이 향기는 하루 종일 따뜻한 포옹처럼 당신을 감싸줍니다.</li>
+				</ul>
+				<br> <br>
+				<hr>
+				<br> <br>
+				<p>
+					<span>향기 특징</span>
+				</p>
+				<ul>
+					<li>상쾌함: 탑 노트의 시트러스와 소나무 잎 향이 당신을 신선한 숲속으로 데려갑니다.</li>
+					<li>따스함: 미들 노트의 자작나무와 시더우드가 주는 따뜻한 나무 향이 마음을 편안하게 해줍니다.</li>
+					<li>은은함: 베이스 노트의 앰버와 머스크가 잔잔하게 남아 하루 종일 지속됩니다.</li>
+				</ul>
+				<br>
+				<button class="add-to-cart"><i class="fa-solid fa-bag-shopping"></i> 장바구니에 추가</button>
+        </div>
+			</div>
+		</section>
+	</main>
+	<footer class="footer_bar">
+		<ul class="footer_text">
+			<li>충청남도 아산시 신창면 읍내리 순천향대학교</li>
+			<li>ahnyo3@naver.com</li>
+			<li>02-1234-5678</li>
+		</ul>
+	</footer>
+	<script src="script.js"></script>
+</body>
+</html>

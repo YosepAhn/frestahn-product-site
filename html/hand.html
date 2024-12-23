@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="product.css"><link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+        <title>FORESTAHN </title>
+        <script src="https://kit.fontawesome.com/fc064ffda6.js" 
+        crossorigin="anonymous">
+    </script><script src="main.js" defer></script>
+</head>
+<body>
+    <nav class="navbar"> 
+        <div class="navbar__logo">
+            <i class="fa-brands fa-pagelines"></i>
+            <a href="home.html">FORESTAHN</a>
+        </div>
+
+        <ul class="navbar__menu">
+            <li onclick="moveToPage1()">FERFUME</li>
+            <li onclick="moveToPage2()"><span>HAND</span></li>
+            <li onclick="moveToPage3()">HOME FARGRANCE</li>
+            <li onclick="moveToPage4()">OUR STORY</li>
+            <li onclick="moveToPage5()">FAQ</li>
+        </ul>
+        <ul class="navbar__icons">
+            <li onclick="moveToPage6()"><i class="fa-solid fa-right-to-bracket"></i></li>
+            <li onclick="moveToPage7()"><i class="fa-solid fa-user"></i></li>
+            <li onclick="moveToPage8()"><i class="fa-solid fa-bag-shopping"></i></li>
+        </ul>
+        <a href="#" class="navbar__toogleBtn">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+    </nav>
+    <header class="header_bar">
+    </header>
+    <script>
+        // 부드러운 페이드 인 효과 추가
+document.addEventListener("DOMContentLoaded", () => {
+    const headerText = document.querySelector('.header_text');
+    headerText.style.opacity = 0;
+    let opacity = 0;
+    const fadeInEffect = setInterval(() => {
+        if (opacity < 1) {
+            opacity += 0.02;
+            headerText.style.opacity = opacity;
+        } else {
+            clearInterval(fadeInEffect);
+        }
+    }, 50);
+});
+
+    </script>
+
+    <main>
+		<section class="product-details">
+			<div class="product-info">
+				<h2>Forest Soft Touch</h2>
+                <br><br>
+				<img src="hand.png" alt="핸드크림 이미지" class="product-image">
+                <br><br>
+				<div class="product-heart">
+					<h2>Forest Embrace</h2>
+					<!-- 찜하기 버튼 클릭 시 로그인 상태 확인 -->
+					<i id="wishlistButton" class="fa-solid fa-heart fa-2xl"
+						style="color: red;" onclick="addToWishlist(2)"></i>
+				</div>
+				<br><br>
+				<p>용량: 75ml</p>
+                <br><br>
+				<p>가격: 20,000 원
+				
+            </p><br><br><hr><br><br>
+				<h4>숲의 신선함과 부드러움을 담은 고급 보습 핸드크림</h4><br><br>
+				<p>"Forest Soft Touch"는 풍부한 보습 성분으로 손을 부드럽고 촉촉하게 유지시켜주는 고급
+					핸드크림입니다. 빠르게 흡수되어 끈적임 없이 피부에 스며들며, 숲의 신선한 향기를 남겨줍니다.</p>
+				<ul>
+					<li>알로에 베라: 피부 진정과 보습 효과</li>
+					<li>시어버터: 손을 보호하고 영양을 공급</li>
+					<li>자연 유래 오일: 손을 부드럽게 유지하며 건조함을 예방</li>
+				</ul>
+                <br>
+				<button class="add-to-cart"><i class="fa-solid fa-bag-shopping"></i> 장바구니에 추가</button>
+			</div>
+		</section>
+	</main>
+
+    <footer class="footer_bar">
+        <ul class="footer_text">
+            <li>충청남도 아산시 신창면 읍내리 순천향대학교</li>
+            <li>ahnyo3@naver.com</li>
+            <li>02-1234-5678</li>
+        </ul>
+        </footer>
+    <script src="script.js"></script>
+   
+</body>
+</html>

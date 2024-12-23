@@ -1,0 +1,212 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --text-color: #000000;
+    --background-color: #fff;
+    --accent-color: #98b198;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: #2c3e50;
+    background: url('homemain.png') no-repeat center center/cover;
+    background-size: cover; /* 배경 이미지가 화면을 가득 채우도록 설정 */
+    background-attachment: fixed; /* 배경 이미지 고정 */
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-color);
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    margin-bottom: 20px;
+}
+
+.navbar__logo {
+    font-size: 18px;
+    color: #02801a;
+    margin-right: 8px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+
+.navbar__menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+.navbar__menu li {
+    color: var(--text-color);
+    font-size: 18px;
+    padding: 10px 40px;
+}
+
+.navbar__menu li:hover {
+    background-color: var(--accent-color);
+    border-radius: 10px;
+}
+.navbar__icons {
+    color: var(--text-color);
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+}
+.navbar__icons li {
+    font-size: 20px;
+    padding: 8px 12px;
+}
+.navbar__toogleBtn {
+    display: none;
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+    color: var(--text-color);
+}
+span{
+    color: #02801a;
+    font-weight: bold; 
+}
+
+.faq-header {
+    text-align: center;
+    padding: 100px 0 50px;
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.faq-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.faq-header p {
+    font-size: 1.2rem;
+}
+
+.faq-section {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.faq-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.faq-answer {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.footer_bar {
+    padding: 50px;
+    background-color: var(--accent-color);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+}
+.footer_text {
+    list-style: none;
+    text-align: center;
+}
+.footer_text li {
+    display: inline-block; /* 리스트를 가로로 배치합니다. */
+    margin: 0 10px; /* 각 리스트 사이의 여백을 조절합니다. */
+}
+
+@media (max-width: 768px) {
+    .product-details {
+        flex-direction: column;
+    }
+    .header_bar{
+        margin-top: 120px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 35px;
+    }
+    .navbar__menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    .navbar__menu li {
+        width: 100%;
+        text-align: center;
+    }
+    .navbar__icons {
+        display: none;
+        justify-content: center;
+        width: 100%;
+    }
+    .navbar__toogleBtn {
+        display: block;
+    }
+
+    .navbar__menu.active,
+    .navbar__icons.active {
+        display: flex;
+    }
+
+    .header_bar {
+        padding: 20px;
+    }
+
+    .footer_bar {
+        padding: 20px 0;
+    }
+    .header_bar {
+        top: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        margin-bottom: 10px;
+    }
+
+    .header_bar {
+        padding: 15px;
+    }
+}
